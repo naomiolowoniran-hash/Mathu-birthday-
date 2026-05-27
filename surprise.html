@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Surprise for Mathu 🎁</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper page">
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Mathu</a>
+      <a href="reasons.html">Reasons I Love You</a>
+      <a href="bts.html">BTS Page</a>
+      <a href="surprise.html">Surprise</a>
+      <a href="letter.html">Letter</a>
+    </nav>
+
+    <div class="card">
+      <div class="card-content center">
+        <h1>Click for a Surprise 👀</h1>
+        <p class="tagline">Because obviously I had to make this dramatic.</p>
+
+        <div class="surprise-box">
+          <button class="btn-primary" onclick="showSurprise()">Press me gently 🎀</button>
+          <div id="surprise-text" class="surprise-text" style="display:none;"></div>
+        </div>
+
+        <div class="footer">
+          After this, read your letter → <a href="letter.html">here</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const messages = [
+      "Plot twist: you are actually the main character of this whole universe.",
+      "Your laugh is my favourite sound. Please never stop using it.",
+      "You are way more beautiful, loved, and important than you realise.",
+      "If life was a K‑drama, you’d be the chaotic best friend everyone falls in love with.",
+      "Thank you for existing exactly the way you are."
+    ];
+
+    function showSurprise() {
+      const box = document.getElementById("surprise-text");
+      const msg = messages[Math.floor(Math.random() * messages.length)];
+      box.textContent = msg;
+      box.style.display = "block";
+    }
+  </script>
+</body>
+</html>
