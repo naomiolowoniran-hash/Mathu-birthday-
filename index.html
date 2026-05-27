@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Mathu 🎀</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- effects -->
+  <div class="confetti-container" id="confetti"></div>
+  <div class="sparkle-container" id="sparkles"></div>
+
+  <div class="wrapper page">
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Mathu</a>
+      <a href="reasons.html">Reasons I Love You</a>
+      <a href="bts.html">BTS Page</a>
+      <a href="surprise.html">Surprise</a>
+      <a href="letter.html">Letter</a>
+    </nav>
+
+    <div class="card">
+      <div class="card-content center">
+        <h1>Happy Birthday, Mathu! 🎂</h1>
+        <p class="tagline">A tiny pastel corner of the internet made just for you.</p>
+
+        <div class="polaroid" style="margin: 0 auto;">
+          <!-- replace with real photo file -->
+          <img src="images/mathu-photo.jpg" alt="Mathu's cute smile">
+          <span>the cutest braces smile ever ✨</span>
+        </div>
+
+        <p>
+          Dear Mathu, this whole website is my little love letter to your laugh,
+          your chaos, and your Sri Lankan queen energy.
+        </p>
+        <p>
+          Click below to enter your birthday world—filled with reasons I adore you,
+          a BTS corner, and a few surprises.
+        </p>
+
+        <a href="about.html" class="btn-primary">Enter the Birthday World 🎀</a>
+
+        <div class="footer">
+          Made with so much love by Naomi ♡
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // pastel confetti
+    const confettiContainer = document.getElementById("confetti");
+    const colors = ["#f7b7d4", "#c7b5ff", "#c9a27b", "#ffe3f2"];
+
+    for (let i = 0; i < 70; i++) {
+      const piece = document.createElement("div");
+      piece.classList.add("confetti-piece");
+      piece.style.left = Math.random() * 100 + "vw";
+      piece.style.animationDelay = Math.random() * 4 + "s";
+      piece.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+      confettiContainer.appendChild(piece);
+    }
+
+    // sparkles
+    const sparkleContainer = document.getElementById("sparkles");
+    for (let i = 0; i < 35; i++) {
+      const s = document.createElement("div");
+      s.classList.add("sparkle");
+      s.style.left = Math.random() * 100 + "vw";
+      s.style.top = Math.random() * 100 + "vh";
+      s.style.animationDelay = Math.random() * 3 + "s";
+      sparkleContainer.appendChild(s);
+    }
+  </script>
+</body>
+</html>
